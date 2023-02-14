@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Modding sur FiveM</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<a href="https://fivem.net/">
+						<!-- <img src="https://logos-world.net/wp-content/uploads/2021/03/FiveM-Logo.png" alt="FiveM logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> -->
+						<img src="./img/FiveM-Logo.png" alt="FiveM logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;"/>
+					</a>
+					<h3>Le modding avec FiveM</h3>
+					<p>
+						<small>Votre hôte : <a href="https://twitter.com/Old_Braan">@Braan</a></small>
+					</p>
+				</section>
+				<section>
+					<h2>À propos</h2>
+					<p>
+						<ul>
+							<li>Développeur Full-Stack</li>
+							<li>Commencé par le C sur le site du Zéro</li>
+							<li>Plein de langages (Java, PHP, Python, Elixir, ...)</li>
+							<li>Jeune garçon qui voulait développer des jeux vidéo</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Modding</h2>
+					<p>
+						<ul>
+							<li>Altérer un ou des aspects d'un jeu vidéo</li>
+							<li>Réalisé par des gens externes à l'équipe de dev</li>
+							<li>Modifications visuelles, modifications / ajout features, refonte totale</li>
+							<!-- <li>Exemples
+								<ul>
+									<li>mod Counter Strike de Half Life</li>
+									<li>mod DOTA de Warcraft 3</li>
+								</ul>
+							</li> -->
+						</ul>
+					</p>
+					<p><small>Source : <a href="https://en.wikipedia.org/wiki/Video_game_modding">wikipedia</a></small></p>
+				</section>
+				<section data-transition="slide-in fade-out">
+					<img src="./img/half_life.jpg" alt="Illustration Half Life" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;"/>
+				</section>
+				<section data-transition="fade-in slide-out">
+					<img src="./img/counter_strike.jpg" alt="Illustration Counter Strike" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;"/>
+				</section>
+				<section>
+					<h2>FiveM</h2>
+					<p>
+						<ul>
+							<li>Mod de GTA V</li>
+							<li>Objectif : jouer à GTA "Online" sur des serveurs dédiés</li>
+							<li>Exécution indépendante de GTA V</li>
+							<li>Un mod fait pour modder !</li>
+						</ul>
+					</p>
+					<p><small>Source : <a href="https://fivem.net/">fivem.net</a></small></p>
+				</section>
+				<section>
+					<h2>GTA V</h2>
+					<p>
+						<ul>
+							<li>Sortie : 17 septembre 2013</li>
+							<li>Jeu bac à sable solo, puis multijoueurs</li>
+							<li>170 millions de copies vendu à septembre 2022</li>
+							<li>2020 année avec le plus de ventes</li>
+							<li>Dernière MAJ le 13/12/2022</li>
+							<li>Au moins 2 grosses MAJ par ans</li>
+						</ul>
+					</p>
+					<p><small>Sources : <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_V">wikipedia GTA 5</a> | <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_Online">wikipedia GTA Online</a> | <a href="https://www.gtabase.com/grand-theft-auto-v/title-updates/">gtabase.com</a></small></p>
+				</section>
+				<section>
+					<iframe width="800" height="600" data-src="https://www.youtube.com/embed/P3NBd3UjH5Y" allowfullscreen></iframe>
+				</section>
+				<section>
+					<h2>GTA RP, vous connaissez ?</h2>
+					<p>
+						<ul>
+							<img src="./img/Twitch_categories_stats.PNG" alt="Statistiques catégories Twitch" style="height: 450px;"/>
+						</ul>
+					</p>
+					<p><small>Source : <a href="https://twitchtracker.com/statistics/games">twitchtracker</a></small></p>
+				</section>
+				<section>
+					<h2>GTA RP, vous connaissez ?</h2>
+					<p>
+						<ul>
+							<img src="./img/fivem_stats.PNG" alt="Statistiques GTA V twitch" style="margin: 0 auto 4rem auto; background: transparent;"/>
+						</ul>
+					</p>
+					<p><small>Source : <a href="https://twitchtracker.com/statistics/games">twitchtracker</a></small></p>
+				</section>
+				<section>
+					<h2>FiveM</h2>
+					<p>
+						<ul>
+							<li>Fonctions internes du moteur via les <a href="https://docs.fivem.net/natives/">"Natives"</a></li>
+							<li>Possible de coder en Lua / C# / JavaScript</li>
+							<li>Interface en HTML / CSS</li>
+							<li>Architecture client / serveur</li>
+							<li>Programmation événementielle</li>
+						</ul>
+						<p><small>Source : <a href="https://docs.fivem.net/docs/">FiveM Doc</a></small></p>
+					</p>
+				</section>
+				<section>
+					<h2>Serveur dédié</h2>
+					<p>
+						<ul>
+							<li>Jusqu'à 2048 joueurs par serveur</li>
+							<li>Possibilité d'importer ses propres véhicules, objets, vêtements, ...</li>
+							<li>Amélioration du netcode + synchronisation</li>
+							<li>Coût : 15 - 50€ HT / mois</li>
+							<li>Possibilité de monétiser son serveur : <a href="https://www.tebex.io/fivem">Tebex</a></li>
+						</ul>
+						<p><small>Source : <a href="https://fivem.net/server-hosting">FiveM Server hosting</a></small></p>
+					</p>
+				</section>
+				<section>
+					<h2>Lua Frameworks</h2>
+					<p>
+						<ul>
+							<li><a href="https://documentation.esx-framework.org/">ESX</a> : LE framework FiveM</li>
+							<li><a href="https://docs.qbcore.org/qbcore-documentation/">qbCore</a> : performances et modularité</li>
+							<li><a href="https://vrp-framework.github.io/vRP/">vRP</a> : 💀</li>
+						</ul>
+					</p>
+					<p><small>Source : <a href="https://docs.fivem.net/docs/server-manual/frameworks/">FiveM Frameworks</a></small></p>
+				</section>
+				<!-- <section>
+					<h2>Gros serveurs FR</h2>
+					<p>
+						<ul>
+							<li>Faily V : natif avec core maison ?</li>
+							<li>21 Jump Click : ESX</li>
+							<li>Flashland : ESX ?</li>
+							<li>SOZ : qbCore</li>
+						</ul>
+					</p>
+				</section> -->
+				<section>
+					<h2>Ressource</h2>
+					<p class="r-stack">
+						<img class="fragment fade-out" data-fragment-index="0" src="./img/script.PNG" alt="Architecture basique de script"/>
+						<img class="fragment current-visible" data-fragment-index="0" src="./img/script_html.PNG" alt="Architecture script avec HTML"/>
+					</p>
+				</section>
+				<section>
+					<h2>fxmanifest.lua</h2>
+					<p>
+						<ul>
+							<li>Nécessaire pour que FiveM détecte la ressource</li>
+							<li>Fichier Lua exécuté séparément</li>
+							<li>Décris les caractéristiques de la ressource:
+								<ul>
+									<li>version</li>
+									<li>compatibilité et dépendances</li>
+									<li>scripts à exécuter</li>
+									<li>...</li>
+								</ul>
+							</li>
+						</ul>
+					</p>
+					<p><small>Sources : <a href="https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/">Doc FiveM</a> | <a href="https://docs.fivem.net/docs/scripting-manual/introduction/creating-your-first-script/">Doc FiveM first script</a></small></p>
+				</section>
+				<section>
+					<h2>fxmanifest.lua</h2>
+					<pre class="lua">
+						<code data-line-numbers>fx_version 'adamant'
+game 'gta5'
+author 'Braan'
+version '1.0.0'
+
+description 'Car Wash script où uniquement le pilote peut nettoyer son véhicule et où la taxe fédérale s applique'
+
+server_scripts {
+	'config.lua',
+	'server/server.lua',
+}
+
+client_scripts {
+	'@es_extended/locale.lua',
+	'config.lua',
+	'client/main.lua',
+	'locales/fr.lua',
+}
+
+dependencies {
+	'es_extended',
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Côté Client</h2>
+					<p>
+						<ul>
+							<li>Scripts exécutés sur la machine cliente</li>
+							<li>Utilisation d'events clients / serveurs</li>
+							<li>Affichages côté client (markers, blips, interfaces, ...)</li>
+							<li>Animations, gestions des intéractions, ...</li>
+							<li>La majorité des fonctions FiveM sont côté client</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Client</h2>
+					<pre class="lua">
+						<code data-line-numbers >AddEventHandler('lyr_carwash:hasEnteredMarker', function()
+	insideMarker = true
+
+	Citizen.CreateThread(function()
+		while insideMarker do
+			ESX.ShowHelpNotification(_U('carwash_help', Config.Price))
+
+			if IsControlJustPressed(0, 38) then
+				if IsPedInAnyVehicle(PlayerPedId(), false) then
+					if GetPedInVehicleSeat(GetVehiclePedIsIn(PlayerPedId()), -1) == PlayerPedId() then
+						TriggerEvent('lyr_carwash:cleanCar')
+					else
+						TriggerEvent('lyr_carwash:displayNotif', 'notTheDriver')
+					end
+				else
+					TriggerEvent('lyr_carwash:displayNotif', 'noCarFound')
+				end
+			end
+			Citizen.Wait(0)
+		end
+	end)
+end)
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Côté Serveur</h2>
+					<p>
+						<ul>
+							<li>Connexion à la base de données</li>
+							<li>Capable de broadcast ou cibler un client</li>
+							<li>Permet des interactions visibles par tous les joueurs (spawn véhicule, props, ...)</li>
+							<li>Etat complet du serveur (joueurs, entités, inventaires, ...)</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Serveur</h2>
+					<pre class="lua">
+						<code data-line-numbers>RegisterNetEvent('lyr_carwash:pay')
+AddEventHandler('lyr_carwash:pay', function()
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local price = ESX.Math.Round(Config.Price)
+
+	if price > 0 then
+		if xPlayer.getMoney() >= price then
+			xPlayer.removeMoney(price)
+			exports.lyr_federal:PayFederalTaxes(price)
+			TriggerClientEvent('lyr_carwash:paymentsuccess', xPlayer.source, price)
+		else
+			TriggerClientEvent('lyr_carwash:displayNotif', xPlayer.source, 'paymentfailure')
+		end
+	end
+end)
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Onesync</h2>
+					<p>
+						<ul>
+							<li>Entités côté serveur (peds, véhicules, objets, ...)</li>
+							<li>Buckets pour séparer logiciellement des joueurs</li>
+							<li>State bags : ajouter des clés/valeurs custom à vos entities</li>
+						</ul>
+					</p>
+					<p><small>Sources : <a href="https://docs.fivem.net/docs/scripting-reference/onesync/">Doc Onesync</a> | <a href="https://docs.fivem.net/docs/scripting-manual/networking/state-bags/">Doc State bags</a></small></p>
+				</section>
+				<section>
+					<h2>Bonnes pratiques</h2>
+					<p>
+						<ul>
+							<li>Fichier de config pour paramétrer la ressource</li>
+							<li>Utilisation de Locale.lua pour les strings</li>
+							<li>Performance de la ressource côté client via resmon</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Config.lua</h2>
+					<pre class="lua">
+						<code data-line-numbers>Config = {}
+Config.Locale = 'fr'
+
+Config.Sender = 'Drogue'
+Config.Subject = 'Vente'
+
+Config.AlertVehiculeTimeout = 30000
+
+Config.Sale = {
+    MaxSellingDistance = 1.0,
+
+    WaitInBetweenStartSales = 30 * 1000, -- temps entre 2 start du script, en millisecondes
+
+    -- Temps de recherche
+    WaitBetweenCustomers = {
+        Min = 20 * 1000,
+        Max = 32 * 1000,
+    },
+    -- Temps d'attente du consomateur
+    WaitCustomer = {
+        Min = 50 * 1000,
+        Max = 90 * 1000,
+    },
+
+    Zone = {
+        MinimumNPCInZone = 25,
+        Distance = {
+            Min = 3,
+            Max = 150,
+        },
+    },
+
+    Animation = {
+        Duration = 2000,
+        AnimDict = 'mp_common',
+        AnimationName = 'givetake2_a',
+    },
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Customisations</h2>
+					<p>
+						<ul>
+							<li>Modifier la map (MLO)</li>
+							<li>Utiliser les intérieurs de GTA Online (via IPL)</li>
+							<li>Véhicles custom / modifiés</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>merci</h2>
+				</section>
+				<section>
+					<iframe width="800" height="600" data-src="https://www.youtube.com/embed/MtKRytLh3s4" allowfullscreen></iframe>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			});
+		</script>
+	</body>
+</html>
